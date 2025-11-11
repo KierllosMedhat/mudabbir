@@ -1,0 +1,270 @@
+/* START GLOBAL */
+:root {
+    --bg-blue:oklch(43.359% 0.26216 266.118);
+    --color-red-100: oklch(93.6% .032 17.717);
+    --color-red-500: oklch(63.7% .237 25.331);
+    --color-red-600: oklch(57.7% .245 27.325);
+    --color-red-800: oklch(44.4% .177 26.899);
+    --color-orange-100: oklch(95.4% .038 75.164);
+    --color-orange-500: oklch(70.5% .213 47.604);
+    --color-orange-600: oklch(64.6% .222 41.116);
+    --color-orange-800: oklch(47% .157 37.304);
+    --color-yellow-100: oklch(97.3% .071 103.193);
+    --color-yellow-600: oklch(68.1% .162 75.834);
+    --color-yellow-800: oklch(47.6% .114 61.907);
+    --color-green-50: oklch(98.2% .018 155.826);
+    --color-green-100: oklch(96.2% .044 156.743);
+    --color-green-400: oklch(79.2% .209 151.711);
+    --color-green-500: oklch(72.3% .219 149.579);
+    --color-green-600: oklch(62.7% .194 149.214);
+    --color-green-700: oklch(52.7% .154 150.069);
+    --color-green-800: oklch(44.8% .119 151.328);
+    --color-emerald-100: oklch(95% .052 163.051);
+    --color-emerald-600: oklch(59.6% .145 163.225);
+    --color-emerald-800: oklch(43.2% .095 166.913);
+    --color-cyan-100: oklch(95.6% .045 203.388);
+    --color-cyan-600: oklch(60.9% .126 221.723);
+    --color-cyan-800: oklch(45% .085 224.283);
+    --color-blue-50: oklch(97% .014 254.604);
+    --color-blue-100: oklch(93.2% .032 255.585);
+    --color-blue-500: oklch(62.3% .214 259.815);
+    --color-blue-600: oklch(54.6% .245 262.881);
+    --color-blue-700: oklch(48.8% .243 264.376);
+    --color-blue-800: oklch(42.4% .199 265.638);
+    --color-blue-900: oklch(37.9% .146 265.522);
+    --color-indigo-50: oklch(96.2% .018 272.314);
+    --color-indigo-100: oklch(93% .034 272.788);
+    --color-indigo-500: oklch(58.5% .233 277.117);
+    --color-indigo-600: oklch(51.1% .262 276.966);
+    --color-indigo-700: oklch(45.7% .24 277.023);
+    --color-indigo-800: oklch(39.8% .195 277.366);
+    --color-purple-100: oklch(94.6% .033 307.174);
+    --color-purple-500: oklch(62.7% .265 303.9);
+    --color-purple-600: oklch(55.8% .288 302.321);
+    --color-purple-800: oklch(43.8% .218 303.724);
+    --color-pink-100: oklch(94.8% .028 342.258);
+    --color-pink-500: oklch(65.6% .241 354.308);
+    --color-pink-600: oklch(59.2% .249 .584);
+    --color-rose-700: oklch(51.4% .222 16.935);
+    --color-gray-50: oklch(98.5% .002 247.839);
+    --color-gray-100: oklch(96.7% .003 264.542);
+    --color-gray-200: oklch(92.8% .006 264.531);
+    --color-gray-300: oklch(87.2% .01 258.338);
+    --color-gray-500: oklch(55.1% .027 264.364);
+    --color-gray-600: oklch(44.6% .03 256.802);
+    --color-gray-700: oklch(37.3% .034 259.733);
+    --color-gray-900: oklch(21% .034 264.665);}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    width: 20px;
+    /* width: 100%; */
+}
+
+.section-card {
+    position: relative;
+    background-color: var(--color-gray-100);
+    border: 1px solid var(--color-gray-300);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px var(--color-gray-300);
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.green-bg {
+    background-color: var(--color-green-100);
+    color: var(--color-green-700);
+    border: 1px var(--color-green-50) solid;
+}
+/* END GLOBAL */
+
+/* Default: Extra-small devices such as small phones (less than 640px) */
+
+/* START HEADER */
+.header {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.header__logo {
+    display: flex;
+}
+
+.header__logo > img {
+    background-color: var(--bg-blue);
+    box-shadow: 2px 2px 2px var(--color-gray-700);
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.brand-name {
+    padding: 10px;
+}
+
+.brand-name h1 {
+    margin: 0px;
+}
+
+.brand-name p {
+    margin: 0px;
+    color: darkslategray;
+}
+
+.user__status span {
+    position: absolute;
+    bottom: 5px;
+    right: 1rem;
+    left: 1rem;
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.user__status img {
+    width: 9px;
+}
+
+.header__user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header__user img {
+    width: 48px;
+    height: 48px;
+}
+
+.user-info {
+    display: flex;
+}
+
+.user-name {
+    display: none;
+}
+
+.header__user-actions {
+    position: relative;
+}
+
+.header__user-actions img {
+    width: 2rem;
+    height: 2rem;
+    padding: 7px;
+    background-color: var(--color-gray-200);
+    border: 1px solid var(--color-gray-300);
+    border-radius: 30%;
+}
+
+.header__user-actions img:hover {
+    background-color: var(--color-gray-300);
+    transition-duration: 0.2s;
+}
+
+.header__user-actions::after {
+    content: "2";
+    background-color: var(--color-red-600);
+    color: white;
+    font-size: small;
+    position: absolute;
+    top: -0.2rem;
+    left: 1.5rem;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.user-info .user-image {
+    background-color: white;
+    padding: 0.5rem 0.7rem;
+    border: 1px solid var(--color-gray-300);
+    box-shadow: 1px 1px var(--color-gray-300);
+    border-radius: 15px;
+}
+
+.user-image img {
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius:  15px;
+    border: 1px solid var(--color-gray-100);
+    margin: 0px;
+}
+
+.user-image:hover {
+    box-shadow: 3px 3px var(--color-gray-300);
+    transition-duration: 0.2s;
+}
+
+/* END HEADER */
+
+
+/* Small devices such as large phones (640px and up) */
+@media only screen and (min-width: 640px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 0.3rem;
+    }
+    .header span {
+        position: static;
+        border-radius: 15px;
+    }
+    .user__status {
+        align-self: center;
+    }
+
+    .header__user {
+        display: flex;
+        gap: 0.7rem;
+    }
+
+    .user-image {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .user-name {
+        display: block;
+    }
+
+    .user-name h3 {
+        margin: 0;
+        font-size: medium;
+    }
+
+    .user-name p {
+        display: none;
+    }
+
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 768px) {
+    .user-name p {
+        display: block;
+        margin: 0;
+        font-size: small;
+        color: var(--color-gray-600);
+        font-weight: bold;
+    }
+}
+
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 1024px) {}
+
+/* Largest devices such as desktops (1280px and up) */
+@media only screen and (min-width: 1280px) {}
