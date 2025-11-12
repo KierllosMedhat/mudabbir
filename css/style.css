@@ -70,7 +70,7 @@ img {
 
 .section-card {
     position: relative;
-    background-color: var(--color-gray-100);
+    background-color: var(--color-gray-50);
     border: 1px solid var(--color-gray-300);
     border-radius: 10px;
     box-shadow: 2px 2px 2px var(--color-gray-300);
@@ -257,8 +257,6 @@ img {
     cursor: pointer;
 }
 
-
-
 .side-navbar .section-links {
     display: flex;
     flex-direction: column;
@@ -322,6 +320,38 @@ img {
     display: none;
 }
 /* END NAVBAR */
+
+
+/* START SUMMARY CARDS */
+
+.summary-cards h2 {
+    font-weight: 900;
+    font-size: 32px;
+    margin: 0.5rem;
+}
+
+.summary-cards p {
+    color: var(--color-gray-500);
+    margin: 0.5rem;
+}
+
+.summary-cards span img {
+    width: 1rem;
+    display:block
+}
+
+.summary-cards .green-card span {
+    color: var(--color-green-700);
+    display: flex;
+}
+
+.summary-cards .red-card span {
+    color: var(--color-red-600);
+    display: flex;
+}
+
+
+/* END SUMMARY CARDS */
 
 /* Small devices such as large phones (640px and up) */
 @media only screen and (min-width: 640px) {
@@ -404,8 +434,12 @@ img {
         gap: 1rem;
     }
 
-    .side-navbar .section-links div {
-        /* margin-block: 1rem; */
+    .summary-cards {
+        display: flex;
+    }
+
+    .summary-cards .section-card {
+        width: 33%;
     }
 }
 
