@@ -131,6 +131,18 @@ img {
     border: 1px var(--color-yellow-100) solid;
 }
 
+.green-text {
+    color: var(--color-green-400);
+}
+
+.red-text {
+    color: var(--color-red-500);
+}
+.yellow-text {
+    color: var(--color-yellow-600);
+}
+
+
 /* END GLOBAL */
 
 /* Default: Extra-small devices such as small phones (less than 640px) */
@@ -537,8 +549,55 @@ img {
     align-self: center;
 }
 
-
 /* END TRANSACTIONS */
+
+/* START BILL TRACKER */
+
+.bill-tracker {
+    display: flex;
+    flex-direction: column;
+}
+
+.bill-tracker__overview {
+    text-align: center;
+    color: var(--color-gray-500);
+}
+
+.bill-tracker__overview h4 {
+    font-size: 32px;
+    color: black;
+    margin: 0px;
+}
+
+.bill-tracker .section {
+    display: flex;
+    justify-content: space-around;
+}
+
+.section div {
+    background-color: var(--color-gray-50);
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--color-gray-200);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 50%;
+}
+
+.section div img {
+    width: 2rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.section span:not(.green-text, .red-text, .yellow-text) {
+    color: var(--color-gray-500);
+}
+
+/* END BILL TRACKER */
 
 /* Small devices such as large phones (640px and up) */
 @media only screen and (min-width: 640px) {
