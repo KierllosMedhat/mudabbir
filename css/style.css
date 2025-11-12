@@ -5,6 +5,7 @@
     --color-red-500: oklch(63.7% .237 25.331);
     --color-red-600: oklch(57.7% .245 27.325);
     --color-red-800: oklch(44.4% .177 26.899);
+    --color-orange-50: oklch(95.396% 0.03815 76.164 / 0.574);
     --color-orange-100: oklch(95.4% .038 75.164);
     --color-orange-500: oklch(70.5% .213 47.604);
     --color-orange-600: oklch(64.6% .222 41.116);
@@ -39,6 +40,7 @@
     --color-indigo-700: oklch(45.7% .24 277.023);
     --color-indigo-800: oklch(39.8% .195 277.366);
     --color-purple-100: oklch(94.6% .033 307.174);
+    --color-purple-200: oklch(94.643% 0.03284 307.067 / 0.538);
     --color-purple-500: oklch(62.7% .265 303.9);
     --color-purple-600: oklch(55.8% .288 302.321);
     --color-purple-800: oklch(43.8% .218 303.724);
@@ -210,6 +212,116 @@ img {
 
 /* END HEADER */
 
+/* START NAVBAR */
+.side-navbar {
+    display: none;
+    padding: 0.5rem;
+}
+
+.side-navbar__logo {
+    display: flex;
+}
+
+.side-navbar__logo .brand-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-navbar .side-navbar__logo img {
+    background-color: var(--bg-blue);
+    box-shadow: 2px 2px 2px var(--color-gray-700);
+    width: 3rem;
+    padding: 0.7rem;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.side-navbar img {
+    width: 2rem;
+    align-self: center;
+}
+
+.side-navbar .section-link:not(.div-selected):hover {
+    background-color: var(--color-gray-50);
+    cursor:pointer;
+}
+
+.side-navbar .div-selected {
+    background-color: var(--color-blue-100);
+    border: 1px solid var(--color-cyan-100);
+    border-radius: 5px;
+    color: var(--color-blue-700);
+}
+
+.div-selected:hover {
+    cursor: pointer;
+}
+
+
+
+.side-navbar .section-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0px;
+    width: 80%;
+}
+
+.side-navbar .quick-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.side-navbar .action img {
+    width: 2.5rem;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.side-navbar .action:hover {
+    background-color: var(--color-gray-50);
+    transform: translate(2px, -2px);
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.action-blue img {
+    background-color: var(--color-blue-50);
+}
+
+.action-blue img:hover {
+    background-color: var(--color-blue-100);
+}
+
+.action-green img {
+    background-color: var(--color-green-50);
+}
+
+.action-green img:hover {
+    background-color: var(--color-green-100);
+}
+
+.action-purple img {
+    background-color: var(--color-purple-200);
+}
+
+.action-purple img:hover {
+   background-color: var(--color-purple-100);
+}
+
+.action-orange img {
+    background-color: var(--color-orange-50);
+}
+
+.action-orange img:hover {
+    background-color: var(--color-orange-100);
+}
+
+.side-navbar h1, .side-navbar p, .side-navbar span {
+    display: none;
+}
+/* END NAVBAR */
 
 /* Small devices such as large phones (640px and up) */
 @media only screen and (min-width: 640px) {
@@ -261,10 +373,55 @@ img {
         color: var(--color-gray-600);
         font-weight: bold;
     }
+
+    body {
+        padding-right: 5rem;
+    }
+
+    .side-navbar {
+        scrollbar-width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 5rem;
+        overflow-y: scroll;
+    }
+
+    .section-link {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+    .action {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .side-navbar .section-links div {
+        /* margin-block: 1rem; */
+    }
 }
 
 /* Large devices such as laptops (1024px and up) */
 @media only screen and (min-width: 1024px) {}
 
 /* Largest devices such as desktops (1280px and up) */
-@media only screen and (min-width: 1280px) {}
+@media only screen and (min-width: 1280px) {
+    body {
+        padding-right: 15rem;
+    }
+    .side-navbar {
+        width: 15rem;
+    }
+    .side-navbar p, .side-navbar span, .side-navbar h3, .side-navbar h1, .side-navbar img {
+        display: inline;
+    }
+
+}
