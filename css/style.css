@@ -895,6 +895,162 @@ body {
 
 /* END ACCOUNT SUMMARY */
 
+/* START PAYMENT METHODS */
+.payment-card-violet {
+    background-color: var(--color-purple-800);
+}
+
+.payment-card-pink {
+    background-color: var(--color-pink-600);
+}
+
+.payment-card-blue {
+    background-color: var(--color-blue-900);
+}
+
+.payment-card {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: 900;
+    padding: 1.5rem;
+    margin-block: 1em;
+    height: 14rem;
+}
+
+.payment-card .logo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment-card .logo img {
+    width: 2.5rem;
+
+}
+
+.payment-card .number h3 {
+    margin: 0;
+}
+
+.payment-card .info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment-card .card-back .black-gradient {
+    background: linear-gradient(90deg, #000, #111 40%, #2b2b2b);
+    width: 100%;
+    height: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+.card-back p {
+    color: var(--color-gray-300);
+    font-size: small;
+}
+
+.card-back .card-number {
+    background-color: white;
+    padding: 0.15rem;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card-back .card-number p {
+    margin-left: 1rem;
+    color: var(--color-gray-900);
+    font-weight: bold;
+}
+
+.card-back .card-ccv {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 1rem;
+}
+
+.card-ccv p {
+    margin-left: 1.5rem;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.card-ccv span {
+    background-color: white;
+    color: var(--color-gray-900);
+    padding: 0.5rem 0.7rem;
+    border-radius: 5px;
+}
+
+.card-back .card-number::after {
+    content: "";
+    background-image: linear-gradient(90deg, #0000000f, #0000002e, #0000000f);
+    border-radius: 2px;
+    width: 86%;
+    height: 15px;
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+}
+
+.payment-card .card-back {
+    display: none;
+}
+
+.payment-card:hover {
+    animation-name: flip-vertical-right;
+    animation-duration: 0.5s;
+    background-color: var(--color-gray-900);
+}
+
+.payment-card:hover .card-face {
+    display: none;
+}
+
+
+.payment-card:hover .card-back {
+    display: block;
+}
+
+
+.flip-vertical-right {
+	-webkit-animation: flip-vertical-right 0.4s linear both;
+	        animation: flip-vertical-right 0.4s linear both;
+}
+
+/**
+ * ----------------------------------------
+ * animation flip-vertical-right
+ * ----------------------------------------
+ */
+@-webkit-keyframes flip-vertical-right {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
+@keyframes flip-vertical-right {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
+
+
+/* END PAYMENY METHODS */
+
 /* Small devices such as large phones (640px and up) */
 @media only screen and (min-width: 640px) {
     .header {
