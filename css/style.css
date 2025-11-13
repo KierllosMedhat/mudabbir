@@ -55,7 +55,8 @@
     --color-gray-500: oklch(55.1% .027 264.364);
     --color-gray-600: oklch(44.6% .03 256.802);
     --color-gray-700: oklch(37.3% .034 259.733);
-    --color-gray-900: oklch(21% .034 264.665);}
+    --color-gray-900: oklch(21% .034 264.665);
+}
 
 *,
 *::before,
@@ -68,8 +69,11 @@ img {
     /* width: 100%; */
 }
 
-.body {
+body {
     background-color: var(--color-gray-100);
+    tab-size: 4;
+    line-height: 1.5;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
 }
 
 .section-card {
@@ -131,12 +135,28 @@ img {
     border: 1px var(--color-yellow-100) solid;
 }
 
+.pink-bg {
+    background-color: var(--color-pink-100);
+    color: var(--color-pink-600);
+    border: 1px var(--color-pink-100) solid;
+}
+
+.orange-bg {
+    background-color: var(--color-orange-100);
+    color: var(--color-orange-600);
+    border: 1px var(--color-orange-100) solid;
+}
+
 .green-text {
     color: var(--color-green-400);
 }
 
 .red-text {
     color: var(--color-red-500);
+}
+
+.blue-text {
+    color: var(--color-blue-500);
 }
 .yellow-text {
     color: var(--color-yellow-600);
@@ -276,6 +296,7 @@ img {
 .side-navbar {
     display: none;
     padding: 0.5rem;
+    background-color: white;
 }
 
 .side-navbar__logo {
@@ -598,6 +619,281 @@ img {
 }
 
 /* END BILL TRACKER */
+
+/* START BUDGET OVERVIEW */
+
+.budget-overview {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.overview-card, .budget-card {
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    position: relative;
+}
+
+.overview-card::after {
+    content: "";
+    position: absolute;
+    height: 0.5rem;
+    background-color: var(--color-gray-300);
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    border-radius: 15px;
+}
+
+.overview-card::before {
+    content: "";
+    position: absolute;
+    height: 0.5rem;
+    width: 75.5%;
+    background-color: var(--color-blue-600);
+    bottom: 1rem;
+    right: 1rem;
+    border-radius: 15px;
+    z-index: 5;
+}
+
+.overview-card p {
+    color: var(--color-gray-500);
+}
+
+.budget-overview h3 {
+    font-size: larger;
+    margin-block: 0.5rem;
+}
+
+.budget-overview h4 {
+    margin-block: 0.5rem;
+}
+
+.budget-overview h3:not(.green-text) {
+    color: var(--color-blue-800);
+}
+
+.overview-card {
+    background-color: var(--color-blue-50);
+}
+
+.budget-card {
+    background-color: var(--color-gray-50);
+    border: 1px solid var(--color-gray-100);
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.budget-card img {
+    width: 2.5rem;
+    height: 2.5rem;
+    align-self: center;
+    padding: 0.5rem;
+    border-radius: 15px;
+}
+
+.orange-card svg path {
+    fill: orange;
+}
+
+.budget-card .spent-section {
+    margin-right: auto;
+}
+
+.budget-card::before {
+    content: "";
+    position: absolute;
+    height: 0.5rem;
+    background-color: var(--color-gray-300);
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    border-radius: 15px;
+}
+
+.orange-card::after {
+    content: "";
+    position: absolute;
+    height: 0.5rem;
+    width: 50%;
+    background-color: var(--color-orange-500);
+    bottom: 1rem;
+    right: 1rem;
+    border-radius: 15px;
+    z-index: 5;
+}
+
+.budget-overview .red-card::after {
+    content: "";
+    position: absolute;
+    height: 0.5rem;
+    background-color: var(--color-red-500);
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+    border-radius: 15px;
+    z-index: 52
+}
+
+.pink-card::after {
+    content: "";
+    position: absolute;
+    height: 0.5rem;
+    width: 80%;
+    background-color: var(--color-pink-500);
+    bottom: 1rem;
+    right: 1rem;
+    border-radius: 15px;
+    z-index: 5;
+}
+
+
+.budget-overview .green-card::after {
+    content: "";
+    position: absolute;
+    height: 0.5rem;
+    width: 86%;
+    background-color: var(--color-green-500);
+    bottom: 1rem;
+    right: 1rem;
+    border-radius: 15px;
+    z-index: 5;
+}
+
+/* END BUDGET OVERVIEW */
+
+/* START INCOME EXPENSE */
+
+.income-expense {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.income-expense__head {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 0;
+}
+
+.chart-guide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.chart-guide span {
+    position: relative;
+}
+
+.chart-guide .income::before {
+    content: "";
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    background-color: var(--color-green-600);
+    position: absolute;
+    bottom: 0.25rem;
+    right: -1.5rem;
+}
+
+.chart-guide .expense::before {
+    content: "";
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    background-color: var(--color-red-600);
+    position: absolute;
+    bottom: 0.25rem;
+    right: -1.5rem;
+}
+
+
+.chart {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.chart-card {
+    margin-top: 186px;
+    position: relative;
+}
+
+.chart-card span::after {
+    content: "";
+    height: 120px;
+    width: 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: var(--color-green-600);
+    position: absolute;
+    bottom: 1.5rem;
+    right: 0.8rem;
+}
+
+.chart-card span::before {
+    content: "";
+    height: 80px;
+    width: 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: var(--color-red-600);
+    position: absolute;
+    bottom: 1.5rem;
+    left: 0.8rem;
+}
+
+/* END INCOME EXPENSE */
+
+/* START ACCOUNT SUMMARY */
+
+.account-summary {
+    display: flex;
+    flex-direction: column;
+}
+
+.account-summary span {
+    color: var(--color-gray-500);
+    font-size: small;
+    font-weight: 500;
+}
+
+.summary-card {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background-color: var(--color-gray-50);
+    border: 1px solid var(--color-gray-100);
+    border-radius: 10px;
+    margin-block: 1rem;
+    padding: 1rem;
+}
+
+.section-card h4 {
+    margin: 0;
+    margin-right: auto;
+}
+
+.card-image img {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+/* END ACCOUNT SUMMARY */
 
 /* Small devices such as large phones (640px and up) */
 @media only screen and (min-width: 640px) {

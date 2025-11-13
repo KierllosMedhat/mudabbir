@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="images/x-icon" href="/images/favicon.png">
     <title>مدبّر | إدارة أموالك بذكاء</title>
@@ -190,7 +193,7 @@
                     <td>
                         <div class="transaction-card">
                             <div class="transaction-icon">
-                                <img src="/images/icons/utensils-solid-full.png" alt="utensils icon">
+                                <img class="orange-bg" src="/images/icons/utensils-solid-full.png" alt="utensils icon">
                             </div>
                             <div class="transaction-data">
                                 <h3>مطعم Meat moot</h3>
@@ -216,7 +219,7 @@
                     <td>
                         <div class="transaction-card">
                             <div class="transaction-icon">
-                                <img src="/images/icons/cart-shopping-solid-full-blue.png" alt="shopping cart icon">
+                                <img class="blue-bg" src="/images/icons/cart-shopping-solid-full-blue.png" alt="shopping cart icon">
                             </div>
                             <div class="transaction-data">
                                 <h3>مشتريات Amazon</h3>
@@ -294,7 +297,7 @@
                     <td>
                         <div class="transaction-card">
                             <div class="transaction-icon">
-                                <img src="/images/icons/gas-pump-solid-full.png" alt="gas pump icon">
+                                <img class="red-bg" src="/images/icons/gas-pump-solid-full.png" alt="gas pump icon">
                             </div>
                             <div class="transaction-data">
                                 <h3>محطة وقود Shell</h3>
@@ -320,7 +323,7 @@
                     <td>
                         <div class="transaction-card">
                             <div class="transaction-icon">
-                                <img src="/images/icons/video-tabe.svg" alt="video-tabe icon">
+                                <img bg="purple-bg" src="/images/icons/video-tape-purple.png" alt="video-tabe icon">
                             </div>
                             <div class="transaction-data">
                                 <h3>اشتراك Netflix</h3>
@@ -346,7 +349,7 @@
                     <td>
                         <div class="transaction-card">
                             <div class="transaction-icon">
-                                <img src="/images/icons/dumbbell-solid-full.png" alt="dumbbell icon">
+                                <img class="blue-bg" src="/images/icons/dumbbell-solid-full.png" alt="dumbbell icon">
                             </div>
                             <div class="transaction-data">
                                 <h3>نادي FitLife</h3>
@@ -372,7 +375,7 @@
                     <td>
                         <div class="transaction-card">
                             <div class="transaction-icon">
-                                <img src="/images/icons/graduation-cap-solid-full.png" alt="graduation cap icon">
+                                <img class="green-bg" src="/images/icons/graduation-cap-solid-full.png" alt="graduation cap icon">
                             </div>
                             <div class="transaction-data">
                                 <h3>كورس Jonas</h3>
@@ -434,7 +437,6 @@
                 <span>يستحق في 15 يوم</span>
             </div>
         </div>
-        </div>
     </div>
     <div class="budget-overview section-card">
         <div class="budget-overview__head section-head">
@@ -443,67 +445,65 @@
         </div>
         <div class="overview-card">
             <div class="total">
-                <span>إجمالي الميزانية</span>
+                <span class="blue-text">إجمالي الميزانية</span>
                 <h3>10000 جنية</h3>
+                <p>المستخدم: 8250 جنية</p>
             </div>
             <div class="remaining">
-                <span>المتبقي</span>
-                <h3>1750 جنية</h3>
-            </div>
-            <div class="spent">
-                <span>المستخدم: 8250 جنية</span>
-                <span>82.5%</span>
+                <p>المتبقي</p>
+                <h3 class="green-text">1750 جنية</h3>
+                <p>82.5%</p>
             </div>
         </div>
         <div class="budget-card orange-card">
+            <img class="orange-bg" src="/images/icons/video-tape-orange.png" alt="video tape icon">
             <div class="section-total">
-                <img src="/images/icons/video-tabe.svg" alt="video tape icon">
                 <div>
-                    <h3>ترفيه</h3>
+                    <h4>ترفيه</h4>
                     <p>الميزانية: 1500 جنية</p>
                 </div>
             </div>
             <div class="spent-section">
-                <h3>750 جنية</h3>
+                <h4>750 جنية</h4>
                 <span class="green-bg">متبقي 50%</span>
             </div>
         </div>
-                <div class="budget-card red-card">
-            <div class="section-total">
-                <img src="/images/icons/file-invoice-dollar-solid-full.png" alt="invoice icon">
-                <div>
-                    <h3>فواتير</h3>
-                    <p>الميزانية: 2000 جنية</p>
-                </div>
+            <div class="budget-card red-card">
+                <img class="red-bg" src="/images/icons/file-invoice-dollar-solid-full-red.png" alt="invoice icon">
+                <div class="section-total">
+                    <div>
+                        <h4>فواتير</h4>
+                        <p>الميزانية: 2000 جنية</p>
+                    </div>
             </div>
             <div class="spent-section">
-                <h3>2000 جنية</h3>
+                <h4>2000 جنية</h4>
                 <span class="red-bg">مستخدم 100%</span>
             </div>
         </div>
         <div class="budget-card pink-card">
+            <img class="pink-bg" src="/images/icons/heart-solid-full.png" alt="heart icon">
             <div class="section-total">
-                <img src="/images/icons/heart-solid-full.png" alt="heart icon">
                 <div>
-                    <h3>العناية الشصية</h3>
+                    <h4>العناية الشصية</h4>
                     <p>الميزانية: 1500 جنية</p>
                 </div>
             </div>
             <div class="spent-section">
-                <h3>1200 جنية</h3>
+                <h4>1200 جنية</h4>
                 <span class="yellow-bg">متبقي 20%</span>
             </div>
         </div>
         <div class="budget-card green-card">
+            <img class="green-bg" src="/images/icons/cart-shopping-solid-full-green.png" alt="shopping cart">
             <div class="section-total">
-                <img src="/images/icons/cart-shopping-solid-full-green.png" alt="shopping cart">
                 <div>
-                    <h3>مستلزمات البيت</h3>
+                    <h4>مستلزمات البيت</h4>
                     <p>الميزانية: 5000 جنية</p>
                 </div>
             </div>
             <div class="spent-section">
-                <h3>4300 جنية</h3>
+                <h4>4300 جنية</h4>
                 <span class="green-bg">متبقي 14%</span>
             </div>
         </div>
@@ -514,7 +514,7 @@
             <span>التحليل ></span>
         </div>
         <div class="chart-guide">
-            <span class="income">الدخل</س>
+            <span class="income">الدخل</span>
             <span class="expense">المصروفات</span>        
         </div>
         <div class="chart">
@@ -538,8 +538,8 @@
             <span>التفاصيل ></span>
         </div>
         <div class="summary-card">
-            <div class="card-image blue-bg">
-                <img src="/images/icons/building-columns-solid-full.png" alt="building icon">
+            <div class="card-image">
+                <img class="blue-bg" src="/images/icons/building-columns-solid-full.png" alt="building icon">
             </div>
             <div class="card-info">
                 <h4>حساب جاري</h4>
@@ -548,8 +548,8 @@
             <h4>8,450 جنيه</h4>
         </div>
          <div class="summary-card">
-            <div class="card-image green-bg">
-                <img src="/images/icons/piggy-bank-solid.png" alt="pigy icon">
+            <div class="card-image">
+                <img class="green-bg" src="/images/icons/piggy-bank-solid-green.png" alt="pigy icon">
             </div>
             <div class="card-info">
                 <h4>حساب التوفير</h4>
@@ -558,8 +558,8 @@
             <h4>297,450 جنيه</h4>
         </div>
          <div class="summary-card">
-            <div class="card-image purple-bg">
-                <img src="/images/icons/credit-card-solid-full-violet.png" alt="credit card icon">
+            <div class="card-image">
+                <img class="purple-bg" src="/images/icons/credit-card-solid-full-violet.png" alt="credit card icon">
             </div>
             <div class="card-info">
                 <h4>بطاقة ائتمان</h4>
@@ -569,7 +569,7 @@
         </div>
     </div>
     <div class="payment-methods section-card">
-        <div class="payment-methods__head section-card">
+        <div class="payment-methods__head section-head">
             <h3>وسائل الدفع</h3>
             <span>إدارة ></span>
         </div>
